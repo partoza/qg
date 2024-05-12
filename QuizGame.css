@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('J4o.gif');
+    background-size: cover; 
+    background-position: center;
+}
+
+#cursor {
+   position: fixed;
+   width: 25px;
+   height: 25px;
+   border-top: 5px solid #0f0;
+   border-left: 5px solid #0f0;
+   transform-origin: top;
+   transform: translate(-1px, 5px) rotate(15deg) scale(1);
+   transition: transform 0.1s;
+   pointer-events: none;
+   filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
+   drop-shadow(0 0 35px #0f0) hue-rotate(60deg);
+}
+
+#cursor::before{
+  content: '';
+  position: absolute;
+  margin-left: -5px;
+  margin-top: -3px;
+  width: 5px;
+  height: 40px;
+  background: #0f0;
+  transform-origin: top;
+  transform: rotate(315deg);
+}
+
+body:hover #cursor{
+  transform: translate(-1px,5px) rotate(15deg) scale(1);
+}
+
+.element{
+  position: absolute;
+  background: #0f0;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  transition: 1s;
+  filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
+    drop-shadow(0 0 35px #0f0) hue-rotate(60deg);
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 15%;
+    font-family: monospace;
+    font-size: 70px;
+    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 25px #0f0)
+    hue-rotate(60deg);
+    color: white;
+}
+
+#description {
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  letter-spacing: 5px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.footer{
+  margin-top: 400px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  color: white;
+}
